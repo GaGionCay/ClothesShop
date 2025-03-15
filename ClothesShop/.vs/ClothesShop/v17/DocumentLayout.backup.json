@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub\\ClothesShop\\ClothesShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|solutionrelative:clothesshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|solutionrelative:clothesshop\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\models\\chatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|solutionrelative:clothesshop\\models\\chatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|solutionrelative:clothesshop\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|solutionrelative:clothesshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05354571-25B8-4083-9E64-3A9F7C2E20EA}|ClothesShop\\ClothesShop.csproj|d:\\github\\clothesshop\\clothesshop\\clothesshop\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,43 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatRequest.cs",
+              "DocumentMoniker": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Models\\ChatRequest.cs",
+              "RelativeDocumentMoniker": "ClothesShop\\Models\\ChatRequest.cs",
+              "ToolTip": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Models\\ChatRequest.cs",
+              "RelativeToolTip": "ClothesShop\\Models\\ChatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T09:57:02.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ClothesShop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "ClothesShop\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAcwCUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-15T06:26:52.203Z",
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "ClothesShop\\Controllers\\ChatController.cs",
+              "ToolTip": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Controllers\\ChatController.cs*",
+              "RelativeToolTip": "ClothesShop\\Controllers\\ChatController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T09:56:45.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Program.cs",
-              "RelativeDocumentMoniker": "ClothesShop\\Program.cs",
-              "ToolTip": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Program.cs",
-              "RelativeToolTip": "ClothesShop\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAEsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T06:05:31.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Views\\Blog\\Index.cshtml",
               "RelativeDocumentMoniker": "ClothesShop\\Views\\Blog\\Index.cshtml",
               "ToolTip": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\Views\\Blog\\Index.cshtml",
               "RelativeToolTip": "ClothesShop\\Views\\Blog\\Index.cshtml",
-              "ViewState": "AgIAAGwBAAAAAAAAAAAcwIMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsBAAAAAAAAAAAcwKwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-15T06:05:25.329Z",
               "EditorCaption": ""
@@ -77,8 +77,7 @@
               "RelativeToolTip": "ClothesShop\\Hubs\\ChatHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T06:04:16.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T06:04:16.467Z"
             }
           ]
         }
