@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\forProjects\\Projecet_PRN222\\ClothesShop\\ClothesShop\\ClothesShop.csproj": {}
+    "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\ClothesShop.csproj": {}
   },
   "projects": {
-    "D:\\forProjects\\Projecet_PRN222\\ClothesShop\\ClothesShop\\ClothesShop.csproj": {
+    "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\ClothesShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\forProjects\\Projecet_PRN222\\ClothesShop\\ClothesShop\\ClothesShop.csproj",
+        "projectUniqueName": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\ClothesShop.csproj",
         "projectName": "ClothesShop",
-        "projectPath": "D:\\forProjects\\Projecet_PRN222\\ClothesShop\\ClothesShop\\ClothesShop.csproj",
+        "projectPath": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\ClothesShop.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\forProjects\\Projecet_PRN222\\ClothesShop\\ClothesShop\\obj\\",
+        "outputPath": "D:\\GitHub\\ClothesShop\\ClothesShop\\ClothesShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

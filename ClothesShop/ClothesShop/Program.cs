@@ -2,6 +2,7 @@
 using A_LIÊM_SHOP.Repositories;
 using A_LIÊM_SHOP.Services;
 using Microsoft.EntityFrameworkCore;
+using ClothesShop.SignalR; // Thêm namespace của Hub
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,8 +29,8 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 
-// Thêm các dịch vụ khác cần thiết cho ứng dụng (MVC, Razor Pages, etc.)
-builder.Services.AddControllersWithViews();
+// Thêm dịch vụ SignalR
+builder.Services.AddSignalR();
 
 // Thêm Session
 builder.Services.AddDistributedMemoryCache();
@@ -56,7 +57,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-//config area
+// Cấu hình endpoint cho SignalR
+app.MapHub<BlogHub>("/bloghub"); // Sử dụng BlogHub đã tạo
+app.MapHub<ChatHub>("/chatHub");
+// Cấu hình area
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
