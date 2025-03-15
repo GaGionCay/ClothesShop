@@ -27,6 +27,79 @@
 
 	<link rel="stylesheet" href="~/css/style.css">
 
+	<!-- SignalR ChatBox Styles -->
+	<style>
+		.chat-icon {
+			position: fixed;
+			bottom: 60px;
+			right: 20px;
+			font-size: 30px;
+			cursor: pointer;
+			background: #007bff;
+			color: white;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			z-index: 1000;
+		}
+
+		.chat-container {
+			position: fixed;
+			bottom: 80px;
+			right: 20px;
+			width: 300px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			background: #fff;
+			font-family: Arial, sans-serif;
+			display: none;
+			z-index: 1000;
+		}
+
+			.chat-container.hidden {
+				display: none;
+			}
+
+		.chat-header {
+			background: #007bff;
+			color: #fff;
+			padding: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.chat-window {
+			height: 200px;
+			overflow-y: auto;
+			padding: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.form-control {
+			margin: 5px;
+		}
+
+		.btn-primary {
+			margin: 5px;
+		}
+
+		.close-btn {
+			background: none;
+			border: none;
+			color: #fff;
+			font-size: 20px;
+			cursor: pointer;
+		}
+	</style>
+
 </head>
 <body>
 	<!--================ Start Header Menu Area =================-->
@@ -95,87 +168,15 @@
 	<!--================ End Header Menu Area =================-->
 
 	<main class="site-main">
-
 		@RenderBody()
-
-
-
 	</main>
-
 
 	<!--================ Start footer Area  =================-->
 	<footer class="footer">
 		<div class="footer-area">
 			<div class="container">
 				<div class="row section_gap">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title large_title">Our Mission</h4>
-							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no
-								divided deep moved us lan Gathering thing us land years living.
-							</p>
-							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved
-							</p>
-						</div>
-					</div>
-					<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
-						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title">Quick Links</h4>
-							<ul class="list">
-								<li><a href="~/#">Home</a></li>
-								<li><a href="~/#">Shop</a></li>
-								<li><a href="~/#">Blog</a></li>
-								<li><a href="~/#">Product</a></li>
-								<li><a href="~/#">Brand</a></li>
-								<li><a href="~/#">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-6 col-sm-6">
-						<div class="single-footer-widget instafeed">
-							<h4 class="footer_title">Gallery</h4>
-							<ul class="list instafeed d-flex flex-wrap">
-								<li><img src="~/img/gallery/r1.jpg" alt=""></li>
-								<li><img src="~/img/gallery/r2.jpg" alt=""></li>
-								<li><img src="~/img/gallery/r3.jpg" alt=""></li>
-								<li><img src="~/img/gallery/r5.jpg" alt=""></li>
-								<li><img src="~/img/gallery/r7.jpg" alt=""></li>
-								<li><img src="~/img/gallery/r8.jpg" alt=""></li>
-							</ul>
-						</div>
-					</div>
-					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title">Contact Us</h4>
-							<div class="ml-40">
-								<p class="sm-head">
-									<span class="fa fa-location-arrow"></span>
-									Head Office
-								</p>
-								<p>123, Main Street, Your City</p>
-
-								<p class="sm-head">
-									<span class="fa fa-phone"></span>
-									Phone Number
-								</p>
-								<p>
-									+123 456 7890 <br>
-									+123 456 7890
-								</p>
-
-								<p class="sm-head">
-									<span class="fa fa-envelope"></span>
-									Email
-								</p>
-								<p>
-									free@infoexample.com <br>
-									www.infoexample.com
-								</p>
-							</div>
-						</div>
-					</div>
+					<!-- Footer content here -->
 				</div>
 			</div>
 		</div>
@@ -184,32 +185,90 @@
 			<div class="container">
 				<div class="row d-flex">
 					<p class="col-lg-12 footer-text text-center">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="~/https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 					</p>
 				</div>
 			</div>
 		</div>
 	</footer>
 	<!--================ End footer Area  =================-->
+	<!-- Chatbox integration -->
+	<div id="chatIcon" class="chat-icon">
+		💬
+	</div>
+
+	<div id="chatContainer" class="chat-container hidden">
+		<div id="chatHeader" class="chat-header">
+			<span>Chat Room</span>
+			<button id="closeChat" class="close-btn">&times;</button>
+		</div>
+		<div id="chatContent" class="chat-content">
+			<div id="chatWindow" class="chat-window"></div>
+			<input type="text" id="username" placeholder="Enter your name" class="form-control" />
+			<input type="text" id="message" placeholder="Type a message" class="form-control" />
+			<button id="sendButton" class="btn btn-primary">Send</button>
+		</div>
+	</div>
+
+	@* SignalR Script *@
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+	<script>
+		$(function () {
+			var connection = new signalR.HubConnectionBuilder()
+				.withUrl("/chatHub")
+				.build();
+
+			connection.on("receiveMessage", function (user, message) {
+				var msg = '<b>' + user + '</b>: ' + message;
+				$('#chatWindow').append('<div>' + msg + '</div>');
+				$('#chatWindow').scrollTop($('#chatWindow')[0].scrollHeight);
+			});
+
+			connection.start().then(function () {
+				console.log("Connected to ChatHub");
+				$('#sendButton').click(function () {
+					var user = $('#username').val();
+					var message = $('#message').val();
+
+					if (user && message) {
+						connection.invoke("SendMessage", user, message)
+							.catch(function (err) {
+								console.error(err.toString());
+							});
+						$('#message').val('').focus();
+					} else {
+						alert("Please enter both username and message.");
+					}
+				});
+			}).catch(function (err) {
+				console.error("SignalR connection failed: ", err.toString());
+			});
+
+			// Toggle chat box
+			$('#chatIcon').click(function () {
+				$('#chatContainer').toggleClass('hidden').fadeToggle();
+			});
+
+			$('#closeChat').click(function () {
+				$('#chatContainer').fadeOut(function() {
+					$(this).addClass('hidden');
+				});
+			});
+		});
+	</script>
+
 	<script src="~/lib/jquery/dist/jquery.js"></script>
 	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-
 	<script src="~/vendors/jquery/jquery-3.2.1.min.js"></script>
 	<script src="~/vendors/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="~/vendors/skrollr.min.js"></script>
 	<script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
 	<script src="~/vendors/nice-select/jquery.nice-select.min.js"></script>
-
 	<script src="~/vendors/nouislider/nouislider.min.js"></script>
-
 	<script src="~/vendors/jquery.ajaxchimp.min.js"></script>
 	<script src="~/vendors/mail-script.js"></script>
 	<script src="~/js/main.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	@if (TempData["ErrorMessage"] != null)
 	{
@@ -228,7 +287,6 @@
 			});
 		</script>
 	}
-
 
 	@await RenderSectionAsync("Scripts", required: false)
 </body>

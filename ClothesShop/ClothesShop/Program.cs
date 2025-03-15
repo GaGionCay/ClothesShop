@@ -1,8 +1,8 @@
 ﻿using A_LIÊM_SHOP.Models;
 using A_LIÊM_SHOP.Repositories;
 using A_LIÊM_SHOP.Services;
+using ClothesShop.Hubs;
 using Microsoft.EntityFrameworkCore;
-using ClothesShop.SignalR; // Thêm namespace của Hub
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,15 +51,13 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+app.MapHub<ChatHub>("/chatHub");
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-// Cấu hình endpoint cho SignalR
-app.MapHub<BlogHub>("/bloghub"); // Sử dụng BlogHub đã tạo
-app.MapHub<ChatHub>("/chatHub");
 // Cấu hình area
 app.UseEndpoints(endpoints =>
 {
